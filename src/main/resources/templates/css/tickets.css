@@ -8,12 +8,20 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/CascadeStyleSheet.css to ed
 */
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&family=Shadows+Into+Light+Two&display=swap');
 *{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+    
     font-family: 'Roboto', sans-serif;
 }
+
 .concierto{
-    background-color: blue;
+    background-color: darkorange;
+    height: 250px;
+}
+.titulo{
+    height: 250px;
+    background: gold;
+}
+body{
+    background-color: lightsalmon;
+    height: 250px;
 }
 

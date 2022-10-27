@@ -3,27 +3,27 @@
 Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
 Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this template
 -->
-<html>
-    <head>
-        <title>Vista</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="css/tickets.css"/>
-    </head>
-    <body>
-        <h1 th:text="${titulo}"></h1>
+<html xmlns:th="http://www.thymeleaf.org">
+    <link rel="stylesheet" href="css/tickets.css"/>
+    
+    <body style="background-color: lightsalmon">
+        <h1 class="titulo" style="color: gold" th:text="${titulo}"></h1>
+    <h2>Lista de Artistas con la información</h2>
+    <h3>informacion(nombre del artista, el costo, fecha, la capacidad y el lugar)</h3>
+        <td>
+        <a style="color: darkgoldenrod"th:href="@{/ticketN}">Crear</a>
+    </td>
         <div class="concierto" th:each="user : ${tickets}">
-                <tr>
+            
+            <tr style="background-color: darkorange">
                     <td th:text="${user.getArtista}"></td>
                     <td th:text="${user.getCosto}"></td>
                     <td th:text="${user.getFecha}"></td>
                     <td th:text="${user.getCapacidad}"></td>
                     <td th:text="${user.getLugar}"></td>
+
                     <td>
-                        <a th:href="@{/ticketN}">Crear</a>
-                    </td>
-                    <td>
-                        <a th:href="@{/delete/{id}(id=${user.getId})}">Delete</a>
+                        <a style="color: darkgoldenrod" th:href="@{/delete/{id}(id=${user.getId})}">Delete</a>
                     </td>
                 </tr>
         </div>
